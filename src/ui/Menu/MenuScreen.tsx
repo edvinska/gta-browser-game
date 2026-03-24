@@ -88,24 +88,4 @@ export const MenuScreen: React.FC<MenuScreenProps> = ({ onStartGame }) => {
       </div>
     </div>
   )
-}                  <p>SPACE - Jump</p>
-                  <p>E - Interact</p>
-                  <p>SHIFT - Sprint</p>
-                </div>
-              </div>
-
-              {/* Back Button */}
-              <Button
-                onClick={() => setShowSettings(false)}
-                variant="secondary"
-                className="w-full"
-              >
-                BACK
-              </Button>
-            </div>
-          </Panel>
-        )}
-      </div>
-    </div>
-  )
 }
