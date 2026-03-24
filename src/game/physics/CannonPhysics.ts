@@ -1,4 +1,4 @@
-import * as CANNON from 'cannon'
+import * as CANNON from 'cannon-es'
 import { Logger } from '@/game/utils/Logger'
 
 export class CannonPhysics {
