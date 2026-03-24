@@ -1,5 +1,5 @@
 import * as THREE from 'three'
-import * as CANNON from 'cannon'
+import * as CANNON from 'cannon-es'
 import { Entity } from '@/types'
 import { CannonPhysics } from '@/game/physics/CannonPhysics'
 import { MathUtils } from '@/game/utils/MathUtils'
