@@ -1,7 +1,7 @@
 type LogLevel = 'log' | 'warn' | 'error' | 'debug'
 
 export class Logger {
-  private static isDev = import.meta.env.DEV
+  private static isDev = true
 
   static log(...args: any[]) {
     if (this.isDev) console.log('[GAME]', ...args)
