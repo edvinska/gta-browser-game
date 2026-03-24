@@ -1,16 +1,12 @@
 import React from 'react'
 import { Button, Panel } from '../Components/ui'
-import { useGameStore } from '@/game/stores/gameState'
 
 interface MenuScreenProps {
   onStartGame: () => void
 }
 
 export const MenuScreen: React.FC<MenuScreenProps> = ({ onStartGame }) => {
-  const { menuOpen } = useGameStore()
   const [showSettings, setShowSettings] = React.useState(false)
-
-  if (!menuOpen) return null
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40" style={{ backdropFilter: 'blur(4px)' }}>
@@ -37,7 +33,7 @@ export const MenuScreen: React.FC<MenuScreenProps> = ({ onStartGame }) => {
               >
                 SETTINGS
               </Button>
-              <Button variant="secondary" className="w-full">
+              <Button variant="secondary" className="w-full" onClick={() => {}}>
                 QUIT
               </Button>
             </div>
@@ -73,6 +69,26 @@ export const MenuScreen: React.FC<MenuScreenProps> = ({ onStartGame }) => {
                 <div className="space-y-1 text-xs text-gray-400">
                   <p>WASD - Move</p>
                   <p>SPACE - Jump</p>
+                  <p>E - Interact</p>
+                  <p>SHIFT - Sprint</p>
+                </div>
+              </div>
+
+              {/* Back Button */}
+              <Button
+                onClick={() => setShowSettings(false)}
+                variant="secondary"
+                className="w-full"
+              >
+                BACK
+              </Button>
+            </div>
+          </Panel>
+        )}
+      </div>
+    </div>
+  )
+}                  <p>SPACE - Jump</p>
                   <p>E - Interact</p>
                   <p>SHIFT - Sprint</p>
                 </div>
